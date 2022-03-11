@@ -2,16 +2,17 @@
 //  RealmWithSwiftUIApp.swift
 //  RealmWithSwiftUI
 //
-//  Created by gomathi saminathan on 3/10/22.
+//  Created by Rajendran Eshwaran on 3/10/22.
 //
 
 import SwiftUI
+import RealmSwift
 
 @main
-struct RealmWithSwiftUIApp: App {
+struct RealmWithSwiftUIApp:SwiftUI.App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView().environment(\.realmConfiguration,Realm.Configuration())
         }
     }
 }
